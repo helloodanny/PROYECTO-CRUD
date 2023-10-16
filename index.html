@@ -6,9 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/styless.css">
   <title>Agenda Kinesy Fisioterapia y rehabilitación</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/styles.css" </head>
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
 
 
 <body>
@@ -18,9 +21,9 @@
       <a class="navbar-brand" href="#">
         <img src="assets/img/Recurso 1@300x.png" alt="Logo" width="200" alt="logo de la pagina web" href="#"
           class="d-inline-block align-text-top">
-        <a href="#"> Sobre nosotros</a>
-        <a href="#"> Servicios</a>
-        <a href="#"> Contactanos</a>
+        <a href="#"> INICIO</a>
+        <a href="#"> CALENDARIO</a>
+        <a href="#"> AGENDA</a>
 
       </a>
     </div>
@@ -32,28 +35,33 @@
       <h1 class="card-title text-md-center">AGENDA DEL DÍA</h1>
       <p class="card-text text-md-center"> <br>
         No olvides llenar la bitacora diariamente con los avances de tu paciente y agendar su próxima cita</p>
-
-      <div class="form-floating mb-3">
-        <textarea class="form-control" placeholder="NOMBRE DEL PACIENTE" id="floatingTextareaDisabled"
-          disabled></textarea>
-        <label for="floatingTextareaDisabled">NOMBRE DEL PACIENTE</label>
-      </div>
-
       <form>
-        <div class="form-floating mb-3">
-          <textarea class="form-control" placeholder="LESION" id="floatingTextareaDisabled" disabled></textarea>
-          <label for="floatingTextareaDisabled">LESION</label>
-        </div>
-        <div class="form-floating mb-3">
-          <textarea class="form-control" placeholder="TRATAMIENTO REALIZADO Y AVANCES" id="floatingTextarea2Disabled"
-            style="height: 100px" disabled></textarea>
-          <label for="floatingTextarea2Disabled">BITACORA Y AVANCES</label>
+        <div class="input-group mb-3">
+          <label id="nombredelpciente" class="input-group-text" id="inputGroup-sizing-default">NOMBRE DEL PACIENTE</label>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
         </div>
 
-        <div class="form-floating mb-3">
-          <textarea class="form-control" placeholder="PROXIMA CITA" id="floatingTextareaDisabled" disabled></textarea>
-          <label for="floatingTextareaDisabled">PROXIMA CITA</label>
+        <div class="input-group mb-3">
+          <label id="LESION" class="input-group-text" id="inputGroup-sizing-default">LESION</label>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
         </div>
+
+        <div class="input-group mb-3">
+          <label id="TX REALZADO Y AVANCES"  class="input-group-text" id="inputGroup-sizing-default">TX REALZADO Y AVANCES</label> 
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+
+        <div class="input-group mb-3">
+          <label id="proximacita" class="input-group-text" id="inputGroup-sizing-default">PROXIMA CITA</label>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+
+        <button id="btnguardar" type="button" class="btn btn-primary btn-lg">GUARDAR</button>
+        <button id="btneditar" type="button" class="btn btn-secondary btn-lg">EDITAR</button>
       </form>
 
     </div>
@@ -74,6 +82,7 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="assets/js/index.js"></script>
+  <script src="assets/js/proximacita.js"></script>
 </body>
 
 
