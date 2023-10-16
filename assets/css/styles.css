@@ -1,0 +1,52 @@
+.navbar {
+    padding: 2rem;
+
+}
+
+
+nav {
+    background-color: #819FF7;
+
+}
+
+nav a {
+
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+}
+
+nav a:hover {
+    background-color: #ced8f6;
+
+}
+
+h1{
+    padding: 2rem;
+}
+
+.card-text{
+    padding-bottom: 3rem;
+    font-size: xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+
+footer {
+    min-height: 100PX;
+    background-color: #819FF7;
+}
+
+h3{
+   text-align: center;
+   padding-top: 4rem;
+   color: black;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+}
