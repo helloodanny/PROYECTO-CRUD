@@ -37,38 +37,34 @@
         No olvides llenar la bitacora diariamente con los avances de tu paciente y agendar su próxima cita</p>
       <form>
         <div class="input-group mb-3">
-          <label id="NOMBRE class="input-group-text" id="inputGroup-sizing-default">NOMBRE DEL PACIENTE</label>
-          <input type="text" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default">
+          <label for="nombredelpaciente" class="input-group-text" id="inputGroup-sizing-default">NOMBRE DEL
+            PACIENTE</label>
+          <input type="text" class="form-control" id="nombredelpaciente">
         </div>
 
         <div class="input-group mb-3">
-          <label id="LESION" class="input-group-text" id="inputGroup-sizing-default">LESION</label>
-          <input type="text" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default">
+          <label for="lesion" class="input-group-text" id="inputGroup-sizing-default">LESION</label>
+          <input type="text" class="form-control" id="lesion">
         </div>
 
         <div class="input-group mb-3">
-          <label id="TX "  class="input-group-text" id="inputGroup-sizing-default">TX REALZADO Y AVANCES</label> 
-          <input type="text" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default">
+          <label for="txrealizado" class="input-group-text" id="inputGroup-sizing-default">TX REALZADO Y AVANCES</label>
+          <input type="text" class="form-control" id="txrealizado">
         </div>
 
         <div class="input-group mb-3">
-          <label id="CITA" class="input-group-text" id="inputGroup-sizing-default">PROXIMA CITA</label>
-          <input type="text" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default">
+          <label for="proximacita" class="input-group-text" id="inputGroup-sizing-default">PROXIMA CITA</label>
+          <input type="text" class="form-control" id="proximacita">
         </div>
 
         <button id="btnguardar" type="button" class="btn btn-primary btn-lg">GUARDAR</button>
-        <button id="btneditar" type="button" class="btn btn-secondary btn-lg">EDITAR</button>
+        <button class="btn btn-danger btn-lg" type="button" id="btnBorrarTodo">BORRAR TODO</button>
 
+        <div class="col-md-12 mt-4" id="divPaciente"></div>
+      </form>
     </div>
   </div>
-
-  <div class="col-md-12 mt-4" id="divPacientes"></div>
-
-
+  
   <footer class="d-flex flex-column align-items-center justify-content-center">
     <div class="card-body">
       <h3 class="card-title">"Es necesario adaptar la terapia al paciente y no el paciente a la terapia." Lanzoudy</h3>
@@ -83,7 +79,6 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="assets/js/index.js"></script>
-  <script src="assets/js/proximacita.js"></script>
 </body>
 
 
