@@ -35,36 +35,43 @@
       <h1 class="card-title text-md-center">AGENDA DEL DÍA</h1>
       <p class="card-text text-md-center"> <br>
         No olvides llenar la bitacora diariamente con los avances de tu paciente y agendar su próxima cita</p>
-      <form>
+      <form> 
+
+        <!--Nombre paciente -->
         <div class="input-group mb-3">
-          <label for="nombredelpaciente" class="input-group-text" id="inputGroup-sizing-default">NOMBRE DEL
-            PACIENTE</label>
+          <label for="nombredelpaciente" class="input-group-text" >NOMBRE DEL PACIENTE</label>
           <input type="text" class="form-control" id="nombredelpaciente">
-        </div>
+        </div><!-- fin div noimbre paciente -->
 
         <div class="input-group mb-3">
-          <label for="lesion" class="input-group-text" id="inputGroup-sizing-default">LESION</label>
+          <label for="lesion" class="input-group-text" >LESION</label>
           <input type="text" class="form-control" id="lesion">
         </div>
 
         <div class="input-group mb-3">
-          <label for="txrealizado" class="input-group-text" id="inputGroup-sizing-default">TX REALZADO Y AVANCES</label>
-          <input type="text" class="form-control" id="txrealizado">
+          <label for="txrealizadoyavances" class="input-group-text" >TX REALIZADO Y AVANCES</label> 
+          <input type="text" class="form-control" id="txrealizadoyavances">
         </div>
 
         <div class="input-group mb-3">
-          <label for="proximacita" class="input-group-text" id="inputGroup-sizing-default">PROXIMA CITA</label>
+          <label for="proximacita" class="input-group-text">PROXIMA CITA</label>
           <input type="text" class="form-control" id="proximacita">
         </div>
 
         <button id="btnguardar" type="button" class="btn btn-primary btn-lg">GUARDAR</button>
         <button class="btn btn-danger btn-lg" type="button" id="btnBorrarTodo">BORRAR TODO</button>
 
-        <div class="col-md-12 mt-4" id="divPaciente"></div>
+        <div class="col-md-12 mt-4" id="divPaciente">
+          <!-- no hay Pacientes aqui  👀-->
+        </div>
+
       </form>
+
+
     </div>
   </div>
-  
+
+
   <footer class="d-flex flex-column align-items-center justify-content-center">
     <div class="card-body">
       <h3 class="card-title">"Es necesario adaptar la terapia al paciente y no el paciente a la terapia." Lanzoudy</h3>
@@ -79,6 +86,7 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="assets/js/index.js"></script>
+  <!--<script src="assets/js/proximacita.js"></script>-->
 </body>
 
 
