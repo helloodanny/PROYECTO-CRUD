@@ -12,6 +12,7 @@ const inputproximacita = document.getElementById("proximacita");
 // Estas son las referencias a mis botones
 const btnguardar = document.getElementById("btnguardar");
 const btnBorrarTodo = document.getElementById("btnBorrarTodo");
+const btnAutorizarGoogle = document.getElementById("btnAutorizarGoogle");
 
 const divPaciente = document.getElementById("divPaciente");
 const alertSinPacientes = document.getElementById("alertSinPacientes");
@@ -123,5 +124,8 @@ function limpiarFormularioPacientes() {
 
 btnguardar.addEventListener("click", guardarPaciente);
 btnBorrarTodo.addEventListener("click", borrarTodo);
+btnAutorizarGoogle.addEventListener("click", function() {
+    window.location.href = urlAutorizacionGoogle;
+});
 
 mostrarPacientes();
