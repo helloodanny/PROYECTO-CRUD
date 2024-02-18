@@ -2,17 +2,15 @@ console.log("Entro index.js");
 
 let agenda = JSON.parse(localStorage.getItem("agendas")) || [];
 
-
-// Estas son las referencias a mis inputs
+// Referencias a los elementos del formulario
 const inputnombredelpaciente = document.getElementById("nombredelpaciente");
 const inputlesion = document.getElementById("lesion");
 const inputtxrealizadoyavances = document.getElementById("txrealizadoyavances");
 const inputproximacita = document.getElementById("proximacita");
 
-// Estas son las referencias a mis botones
+// Referencias a los botones
 const btnguardar = document.getElementById("btnguardar");
 const btnBorrarTodo = document.getElementById("btnBorrarTodo");
-const btnAutorizarGoogle = document.getElementById("btnAutorizarGoogle");
 
 const divPaciente = document.getElementById("divPaciente");
 const alertSinPacientes = document.getElementById("alertSinPacientes");
@@ -29,22 +27,16 @@ class Paciente {
     }
 }
 
-
 function guardarPaciente() {
     let nombre = inputnombredelpaciente.value;
     let lesion = inputlesion.value;
     let txrealizado = inputtxrealizadoyavances.value;
     let proximacita = inputproximacita.value;
 
-    let paciente = new Paciente(
-        nombre,
-        lesion,
-        txrealizado,
-        proximacita
-    );
+    let paciente = new Paciente(nombre, lesion, txrealizado, proximacita);
 
     if (indexEditar === null) {
-        agenda.push(paciente); // Crear desde Cero
+        agenda.push(paciente); // Crear desde cero
     } else {
         agenda[indexEditar] = paciente; // Actualizar
         indexEditar = null;
@@ -53,7 +45,6 @@ function guardarPaciente() {
     limpiarFormularioPacientes();
     localStorage.setItem("agendas", JSON.stringify(agenda));
     mostrarPacientes();
-
 }
 
 // Borrar todos los pacientes
@@ -92,23 +83,22 @@ function mostrarPacientes() {
         agenda.forEach((paciente, index) => {
             divPaciente.innerHTML += `
                 <div class="card mb-3">
-                   <div class="row g-0">
-                      <div class="col-md-12">
-                         <div class="card-body">
-                            <h5 class="card-title">${paciente.nombre}</h5>
-                            
-                            <h6 class="card-subtitle mb-2 text-body-secondary">${paciente.lesion} - ${paciente.txrealizado} - ${paciente.siguienteCita}</h6>
-                            <div class="row mb-2">
-                               <div class="col">
-                                  <button class="btn btn-warning w-100 mt-2" type="button" id="editar-${index}" onclick="editarPaciente(${index})">Editar</button>
-                               </div>
-                               <div class="col">
-                                  <button class="btn btn-danger w-100 mt-2" type="button" id="eliminar-${index}" onclick="eliminarPaciente(${index})">Eliminar</button>
-                               </div>
+                    <div class="row g-0">
+                        <div class="col-md-12">
+                            <div class="card-body">
+                                <h5 class="card-title">${paciente.nombre}</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">${paciente.lesion} - ${paciente.txrealizado} - ${paciente.siguienteCita}</h6>
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <button class="btn btn-warning w-100 mt-2" type="button" id="editar-${index}" onclick="editarPaciente(${index})">Editar</button>
+                                    </div>
+                                    <div class="col">
+                                        <button class="btn btn-danger w-100 mt-2" type="button" id="eliminar-${index}" onclick="eliminarPaciente(${index})">Eliminar</button>
+                                    </div>
+                                </div>
                             </div>
-                         </div>
-                      </div>
-                   </div>
+                        </div>
+                    </div>
                 </div>
             `;
         });
@@ -124,8 +114,5 @@ function limpiarFormularioPacientes() {
 
 btnguardar.addEventListener("click", guardarPaciente);
 btnBorrarTodo.addEventListener("click", borrarTodo);
-btnAutorizarGoogle.addEventListener("click", function() {
-    window.location.href = urlAutorizacionGoogle;
-});
 
 mostrarPacientes();
